@@ -217,6 +217,7 @@
             line-height: 1.4;
             color: #87CEFA;
         }
+        
     </style>
 </head>
 
@@ -227,11 +228,10 @@
         </div>
 
         <div class="thank-order-info">
-            <p>Cảm ơn quý khách đã đặt hàng tại <a>www.congnghetsmart.com</a></p>
+            <p>Cảm ơn quý khách đã đặt hàng tại <a href="https://www.congnghetsmart.com/">www.congnghetsmart.com</a></p>
             <p class="content">Chúng tôi rất vui thông báo đơn hàng #FPP3FO của quý khách đã được tiếp nhận và đang trong
                 quá trình xử lý.
-                <a class="link"> www.congnghetsmart.com </a> sẽ thông báo đến quý khách ngay khi hàng chuẩn bị được
-                giao.
+                <a href="https://www.congnghetsmart.com/" class="link"> www.congnghetsmart.com </a> sẽ thông báo đến quý khách ngay khi hàng chuẩn bị được giao.
             </p>
         </div>
 
@@ -247,16 +247,15 @@
                     <a href="mailto:{{ $customer['email'] }}">{{ $customer['email'] }}</a>
                 </span>
                 <span style="display:block;">{{ $customer['phone'] }}</span>
-
             </div>
             <div>
                 <strong>Địa chỉ giao hàng</strong><br>
-                 <span style="display:block; margin-bottom:5px;">
-                {{ $customer['name'] }}<br>
-                <a href="mailto:{{ $customer['email'] }}">{{ $customer['email'] }}</a><br>
-                {{ $customer['address'] }}<br>
-                Tel: {{ $customer['phone'] }}
-                 </span>
+                <span style="display:block; margin-bottom:5px;">
+                    {{ $customer['name'] }}<br>
+                    <a href="mailto:{{ $customer['email'] }}">{{ $customer['email'] }}</a><br>
+                    {{ $customer['address'] }}<br>
+                    Tel: {{ $customer['phone'] }}
+                </span>
             </div>
         </div>
 
@@ -281,6 +280,7 @@
                     <th class="right">Tổng tiền</th>
                 </tr>
             </thead>
+
             <tbody>
                 @foreach ($orderItems as $item)
                     <tr>
@@ -318,12 +318,12 @@
             <strong>Bạn cần được hỗ trợ ngay?</strong> Ghi chú gửi mail về
             <strong>{{ config('mail.from.address') }}</strong> - hotline
             <strong>{{ config('app.phone', '0123456789') }}</strong> (8:21h và T7,CN). <a
-                href="{{ config('app.url') }}" class="website-link">{{ config('app.url') }}</a> luôn sẵn sàng hỗ trợ
+                href="https://www.congnghetsmart.com/}" class="website-link">{{ config('app.url') }}</a> luôn sẵn sàng hỗ trợ
             bạn để bạn có trải nghiệm tốt nhất.
         </div>
 
         <div class="footer">
-            <p>Một lần nữa <a href="{{ config('app.url') }}" class="website-link">{{ config('app.url') }}</a> cảm ơn
+            <p>Một lần nữa <a href="https://www.congnghetsmart.com/" class="website-link">{{ config('app.url') }}</a> cảm ơn
                 quý khách.</p>
 
             <div class="company-name">
@@ -331,18 +331,18 @@
             </div>
         </div>
     </div>
+
     <div class="conttent-out">
         <div>
-            <p>Quý khách nhận được email này vì đã mua hàng tại <a href="{{ config('app.url') }}"
+            <p>Quý khách nhận được email này vì đã mua hàng tại <a href="https://www.congnghetsmart.com/"
                     class="website-link">{{ config('app.url') }}</a></p>
-            <p>Để đảm bảo luôn nhận được email thông báo, xin nhật hàng tại <a href="{{ config('app.url') }}"
+            <p>Để đảm bảo luôn nhận được email thông báo, xin nhật hàng tại <a href="https://www.congnghetsmart.com/"
                     class="website-link">{{ config('app.url') }}</a>, quý khách vui lòng thêm email
                 <strong>{{ config('mail.from.address') }}</strong> vào địa chỉ (Address Book, Contacts) của hộp email.
             </p>
             <p>Địa chỉ:
-                {{ config('app.address', 'Số 10 Phạm Gia Phong, phường Thể Thành, quận Tân Phú, Tp Hồ Chí Minh') }}</p>
+                {{ config('app.address', 'Số 10 Phạm Gia Phong, phường Thể Thành, quận Tân Phú, Tp Hồ Chí Minh') }}</p >
         </div>
-
     </div>
 </body>
 
